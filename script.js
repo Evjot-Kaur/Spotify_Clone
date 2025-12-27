@@ -33,14 +33,14 @@ const updateSongItemPlayIcon = (index, isPlaying) => {
 //handle play/pause click
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
-        audioElement.play();
+        //audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
         gif.style.opacity=1;
         updateSongItemPlayIcon(songIndex, true);
     }
     else{
-        audioElement.pause();
+        //audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
         gif.style.opacity=0;   
@@ -67,7 +67,7 @@ songItems.forEach((element, i) => {
     element.getElementsByClassName('songItemPlay')[0].addEventListener('click', (e) => {
         if (currentSongIndex === i) {
             if (audioElement.paused || audioElement.currentTime <= 0) {
-                audioElement.play();
+                //audioElement.play();
                 e.target.classList.remove('fa-play-circle');
                 e.target.classList.add('fa-pause-circle');
                 masterPlay.classList.remove('fa-play-circle');
@@ -75,7 +75,7 @@ songItems.forEach((element, i) => {
                 gif.style.opacity = 1;
                 masterSongName.innerText = songs[i].songName;
             } else {
-                audioElement.pause();
+                //audioElement.pause();
                 e.target.classList.remove('fa-pause-circle');
                 e.target.classList.add('fa-play-circle');
                 masterPlay.classList.remove('fa-pause-circle');
@@ -93,7 +93,7 @@ songItems.forEach((element, i) => {
             makeAllPlays();
             currentSongIndex = i;
             audioElement.src = songs[i].filePath;
-            audioElement.play();
+            //audioElement.play();
             e.target.classList.remove('fa-play-circle');
             e.target.classList.add('fa-pause-circle');
             masterPlay.classList.remove('fa-play-circle');
@@ -114,7 +114,7 @@ document.getElementById('next').addEventListener('click',()=>{
     audioElement.src = `songs/${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
-    audioElement.play();
+    //audioElement.play();
     gif.style.opacity=1;
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
@@ -131,7 +131,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     audioElement.src = `songs/${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
-    audioElement.play();
+    //audioElement.play();
     gif.style.opacity=1;
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
@@ -139,3 +139,4 @@ document.getElementById('previous').addEventListener('click',()=>{
     updateSongItemPlayIcon(songIndex, true);
 
 })
+
