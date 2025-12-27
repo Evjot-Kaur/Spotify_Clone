@@ -1,7 +1,7 @@
 console.log("welcome to Spotify");
 //intialize variables
 let songIndex=0;
-let audioElement = new Audio('songs/1.mp3');
+//let audioElement = new Audio('songs/1.mp3');
 let masterPlay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
@@ -137,4 +137,5 @@ document.getElementById('previous').addEventListener('click',()=>{
     masterPlay.classList.add('fa-pause-circle');
     makeAllPlays();
     updateSongItemPlayIcon(songIndex, true);
+
 })
