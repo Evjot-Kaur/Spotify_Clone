@@ -1,7 +1,7 @@
 console.log("welcome to Spotify");
 //intialize variables
 let songIndex=0;
-//let audioElement = new Audio('songs/1.mp3');
+let audioElement = new Audio('songs/1.mp3');
 let masterPlay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
@@ -111,7 +111,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         songIndex+=1;
     }
-    //audioElement.src = `${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
     //audioElement.play();
@@ -128,7 +128,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     else{
         songIndex-=1;
     }
-    //audioElement.src = `${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
     //audioElement.play();
