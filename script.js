@@ -1,19 +1,19 @@
 console.log("welcome to Spotify");
 //intialize variables
 let songIndex=0;
-//let audioElement = new Audio('songs/1.mp3');
+//let audioElement = new Audio('1.mp3');
 let masterPlay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
 let masterSongName=document.getElementById('masterSongName');
 let songItems=Array.from(document.getElementsByClassName('songItem'));
 let songs= [
-    {songName: "Let me Love You", filePath:"songs/1.mp3", coverPath:"cover1.avif"},
-    {songName: "Mera Mann", filePath:"songs/2.mp3", coverPath:"cover1.avif"},
-    {songName: "Aaye Haaye", filePath:"songs/3.mp3", coverPath:"cover1.avif"},
-    {songName: "Payal", filePath:"songs/4.mp3", coverPath:"cover1.avif"},
-    {songName: "Waalian", filePath:"songs/5.mp3", coverPath:"cover1.avif"},
-    {songName: "Cheap Thrills", filePath:"songs/6.mp3", coverPath:"cover1.avif"},
+    {songName: "Let me Love You", filePath:"1.mp3", coverPath:"cover1.avif"},
+    {songName: "Mera Mann", filePath:"2.mp3", coverPath:"cover1.avif"},
+    {songName: "Aaye Haaye", filePath:"3.mp3", coverPath:"cover1.avif"},
+    {songName: "Payal", filePath:"4.mp3", coverPath:"cover1.avif"},
+    {songName: "Waalian", filePath:"5.mp3", coverPath:"cover1.avif"},
+    {songName: "Cheap Thrills", filePath:"6.mp3", coverPath:"cover1.avif"},
    ]
 songItems.forEach((element, i)=>{
     element.getElementsByTagName("img")[0].src=songs[i].coverPath;
@@ -111,7 +111,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         songIndex+=1;
     }
-    //audioElement.src = `songs/${songIndex+1}.mp3`;
+    //audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
     //audioElement.play();
@@ -128,7 +128,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     else{
         songIndex-=1;
     }
-    //audioElement.src = `songs/${songIndex+1}.mp3`;
+    //audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
     //audioElement.play();
