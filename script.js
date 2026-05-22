@@ -92,8 +92,8 @@ songItems.forEach((element, i) => {
             }
             ////makeAllPlays();
             currentSongIndex = i;
-            //audioElement.src = songs[i].filePath;
-            //audioElement.play();
+            audioElement.src = songs[i].filePath;
+            audioElement.play();
             e.target.classList.remove('fa-play-circle');
             e.target.classList.add('fa-pause-circle');
             masterPlay.classList.remove('fa-play-circle');
@@ -114,7 +114,7 @@ document.getElementById('next').addEventListener('click',()=>{
     audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
-    //audioElement.play();
+    audioElement.play();
     gif.style.opacity=1;
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
@@ -131,7 +131,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText=songs[songIndex].songName;
     audioElement.currentTime=0;
-    //audioElement.play();
+    audioElement.play();
     gif.style.opacity=1;
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
